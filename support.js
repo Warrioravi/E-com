@@ -111,6 +111,7 @@ function filtermiddleware(filterType){
     
   }
 }
+console.log("sss");
 console.log();
 render('all');
 //sidebar news code 
