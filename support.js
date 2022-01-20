@@ -111,7 +111,7 @@ function filtermiddleware(filterType){
     
   }
 }
-
+console.log();
 render('all');
 //sidebar news code 
 fetch("https://newsapi.org/v2/everything?q=maersk&apiKey=a1f181aa894c4ebcbf3a17b37a4d9c5f")
