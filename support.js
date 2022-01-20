@@ -1,4 +1,6 @@
 console.log('Hello');
+console.log('Hey');
+
 const queries=[
   {
     query:"What is this payment problem",
