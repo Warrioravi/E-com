@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { Container } from "../../globalStyles";
-import { Link } from "react-router-dom";
 import { FaMagento } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { Container } from "../../globalStyles";
 
+// Style component for nav
 export const Nav = styled.nav`
   background: #101522;
   height: 80px;
@@ -19,9 +20,10 @@ export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
-
   ${Container}
 `;
+
+// NavLogo Styles
 export const NavLogo = styled(Link)`
   color: #fff;
   justify-self: flex-start;
@@ -35,6 +37,7 @@ export const NavLogo = styled(Link)`
 export const NavIcon = styled(FaMagento)`
   margin-right: 0.5rem;
 `;
+
 export const MobileIcon = styled.div`
   display: none;
 
@@ -48,6 +51,7 @@ export const MobileIcon = styled.div`
     cursor: pointer;
   }
 `;
+
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
@@ -58,7 +62,7 @@ export const NavMenu = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 98vh;
+    height: 90vh;
     position: absolute;
     top: 80px;
     left: ${({ click }) => (click ? 0 : "-100%")};
@@ -84,6 +88,17 @@ export const NavItem = styled.li`
     }
   }
 `;
+
+export const NavItemBtn = styled.li`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+`;
+
 export const NavLinks = styled(Link)`
   color: #fff;
   display: flex;
@@ -99,29 +114,18 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #4b59f4;
+      color: #4b59f7;
       transition: all 0.3s ease;
     }
   }
 `;
 
-export const NavItemBtn = styled.li` 
-@media screen and (max-width: 960px) {
- display: flex;
- justify-content : center ;
- align-items: center;
- width: 100%;
- height: 120px;
-}
-`
 export const NavBtnLink = styled(Link)`
-display: flex;
-justify-content: center;
-align-items: center;
-text-decoration: none;
-padding: 8px 16px;
-height: 100%;
-width: 100%;
-outline: none;
-border: none;
-`
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+`;
